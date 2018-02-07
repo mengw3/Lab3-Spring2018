@@ -13,10 +13,13 @@ public class Lab3 {
         website.replace("^[A-Za-z]",",");
         String[] a = website.split(",");
         int n = a.length;
+        int count = 0;
         for(int i = 0; i < n; i++) {
-            
+            if (a[i] == "Prince") {
+                count += 1;
+            }
         }
-
+        return count;
     }
     public static void main(String[] unused) {
         String website = urlToString("http://erdani.com/tdpl/hamlet.txt");
